@@ -102,7 +102,7 @@ npm run dev
 
 ## Services Used
 
-- **Google Services**: Deep integration of Gemini 2.0 Flash (Agentic Logic), Google Maps Platform, Cloud Run, **Cloud Logging**, **Cloud Error Reporting**, and **Cloud Trace**.
+- **Google Services**: Deep integration of Gemini 3.1 Flash (Agentic Logic), Google Maps Platform, Cloud Run, **Cloud Logging**, **Cloud Error Reporting**, and **Cloud Trace**.
 - **Accessibility**: ARIA-compliant components, bilingual support, and high-contrast tricolor design.
 - **Security**: Robust Pydantic validation and secure handling of API keys via server-side orchestration.
 - **Testing**: 19+ integration and unit tests ensuring tool reliability.
