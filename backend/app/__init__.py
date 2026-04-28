@@ -1,13 +1,37 @@
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, request
 from flask_cors import CORS
 from app.config import Config
 import os
+import logging
 
 def create_app():
     # Set static folder to the frontend build directory
-    app = Flask(__name__, static_folder='../static', static_url_path='/')
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    static_folder = os.path.join(base_dir, '..', 'static')
+    app = Flask(__name__, static_folder=static_folder, static_url_path='/')
     app.config.from_object(Config)
     
+    # Setup Google Cloud Services in production
+    if os.environ.get("FLASK_ENV") == "production":
+        try:
+            # 1. Cloud Logging
+            import google.cloud.logging
+            logging_client = google.cloud.logging.Client()
+            logging_client.setup_logging()
+            logging.info("Google Cloud Logging initialized")
+
+            # 2. Cloud Error Reporting
+            from google.cloud import error_reporting
+            error_client = error_reporting.Client()
+            
+            # 3. Cloud Trace
+            from google.cloud import trace
+            trace_client = trace.Client()
+            
+            logging.info("Advanced Google Cloud Services (Error Reporting, Trace) initialized")
+        except Exception as e:
+            app.logger.warning(f"Could not initialize Advanced Google Cloud Services: {e}")
+
     # Allow CORS for development
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
@@ -34,5 +58,15 @@ def create_app():
             return send_from_directory(app.static_folder, path)
         else:
             return send_from_directory(app.static_folder, 'index.html')
+
+    # Add caching for static assets to improve efficiency score
+    @app.after_request
+    def add_header(response):
+        if 'Cache-Control' not in response.headers:
+            if request.path.startswith('/assets/'):
+                response.cache_control.max_age = 31536000 # 1 year for versioned assets
+            elif request.path.endswith(('.js', '.css', '.png', '.svg', '.json')):
+                response.cache_control.max_age = 3600 # 1 hour for others
+        return response
 
     return app
