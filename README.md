@@ -1,7 +1,7 @@
 # 🗳️ Chunav Mitra (चुनाव मित्र)
 ### *Agentic Election Education Companion for the World's Largest Democracy*
 
-[![Gemini](https://img.shields.io/badge/Powered%20By-Gemini%202.0-blue?logo=google-gemini)](https://deepmind.google/technologies/gemini/)
+[![Gemini](https://img.shields.io/badge/Powered%20By-Gemini-blue?logo=google-gemini)](https://deepmind.google/technologies/gemini/)
 [![React](https://img.shields.io/badge/Frontend-React%2018-61DAFB?logo=react)](https://react.dev/)
 [![Flask](https://img.shields.io/badge/Backend-Flask-white?logo=flask)](https://flask.palletsprojects.com/)
 [![Tailwind](https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
