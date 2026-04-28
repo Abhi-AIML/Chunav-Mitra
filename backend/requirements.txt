@@ -4,3 +4,6 @@ google-genai==0.3.0
 pydantic==2.6.4
 python-dotenv==1.0.1
 pytest==8.1.1
+google-cloud-logging==3.10.0
+google-cloud-error-reporting==1.1.2
+google-cloud-trace==1.11.2
