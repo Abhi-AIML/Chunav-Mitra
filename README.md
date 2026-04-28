@@ -100,7 +100,7 @@ npm run dev
 
 ---
 
-## 🏆 Hackathon Evaluation Areas
+## Services Used
 
 - **Google Services**: Deep integration of Gemini 2.0 Flash (Agentic Logic), Google Maps Platform, Cloud Run, **Cloud Logging**, **Cloud Error Reporting**, and **Cloud Trace**.
 - **Accessibility**: ARIA-compliant components, bilingual support, and high-contrast tricolor design.
