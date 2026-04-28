@@ -1,7 +1,7 @@
 # 🗳️ Chunav Mitra (चुनाव मित्र)
 ### *Agentic Election Education Companion for the World's Largest Democracy*
 
-[![Gemini](https://img.shields.io/badge/Powered%20By-Gemini-blue?logo=google-gemini)](https://deepmind.google/technologies/gemini/)
+[![Gemini](https://img.shields.io/badge/Powered%20By-Gemini%202.0-blue?logo=google-gemini)](https://deepmind.google/technologies/gemini/)
 [![React](https://img.shields.io/badge/Frontend-React%2018-61DAFB?logo=react)](https://react.dev/)
 [![Flask](https://img.shields.io/badge/Backend-Flask-white?logo=flask)](https://flask.palletsprojects.com/)
 [![Tailwind](https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
@@ -102,7 +102,7 @@ npm run dev
 
 ## 🏆 Hackathon Evaluation Areas
 
-- **Google Services**: Deep integration of Gemini 2.0 Flash (Agentic Logic), Google Maps Platform, and Cloud Run.
+- **Google Services**: Deep integration of Gemini 2.0 Flash (Agentic Logic), Google Maps Platform, Cloud Run, **Cloud Logging**, **Cloud Error Reporting**, and **Cloud Trace**.
 - **Accessibility**: ARIA-compliant components, bilingual support, and high-contrast tricolor design.
 - **Security**: Robust Pydantic validation and secure handling of API keys via server-side orchestration.
 - **Testing**: 19+ integration and unit tests ensuring tool reliability.
