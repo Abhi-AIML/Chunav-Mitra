@@ -1,0 +1,12 @@
+{
+  "phases": [
+    { "phase": 1, "date": "2024-04-19", "states": ["Tamil Nadu", "Rajasthan", "Uttar Pradesh"] },
+    { "phase": 2, "date": "2024-04-26", "states": ["Kerala", "Karnataka", "Maharashtra"] },
+    { "phase": 3, "date": "2024-05-07", "states": ["Gujarat", "Madhya Pradesh"] },
+    { "phase": 4, "date": "2024-05-13", "states": ["Andhra Pradesh", "Telangana"] },
+    { "phase": 5, "date": "2024-05-20", "states": ["Maharashtra", "Odisha"] },
+    { "phase": 6, "date": "2024-05-25", "states": ["Delhi", "Haryana"] },
+    { "phase": 7, "date": "2024-06-01", "states": ["Punjab", "Himachal Pradesh", "West Bengal"] }
+  ],
+  "results_date": "2024-06-04"
+}
