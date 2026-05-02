@@ -22,7 +22,7 @@ def test_health_endpoint(client):
     data = json.loads(rv.data)
     assert rv.status_code == 200
     assert data['status'] == 'ok'
-    assert data['service'] == 'chunav-mitra-backend'
+    assert data['service'] == 'chunav-mitra-unified'
 
 
 def test_chat_requires_message(client):
