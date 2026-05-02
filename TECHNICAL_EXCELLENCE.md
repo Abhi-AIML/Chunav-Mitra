@@ -21,11 +21,12 @@ The UI is built with a custom **Tricolor Design System** (Saffron, White, Green)
 - **Accessibility**: 100% ARIA-compliant interactive elements with high-contrast color palettes.
 - **Micro-animations**: Leverages `framer-motion` for smooth, meaningful transitions between election phases.
 
-### 3. Production-Grade Observability
+### 3. Production-Grade Observability & Security
 Built for the Google Cloud ecosystem:
 - **Cloud Logging**: Structured logs for every agent interaction.
 - **Cloud Error Reporting**: Real-time crash monitoring.
 - **Cloud Trace**: Latency tracking to ensure Gemini responses remain under 2s.
+- **Defense in Depth**: Implementation of **HSTS, X-Frame-Options, XSS-Protection, and No-Sniff** headers for enterprise-grade security.
 
 ### 4. Efficient Unified Deployment
 The entire platform is deployed as a single **Unified Container** on **Google Cloud Run**:
