@@ -59,14 +59,21 @@ def create_app():
         else:
             return send_from_directory(app.static_folder, 'index.html')
 
-    # Add caching for static assets to improve efficiency score
+    # Security and Caching Headers
     @app.after_request
-    def add_header(response):
+    def add_security_and_cache_headers(response):
+        # 1. Security Headers (Defense in Depth)
+        response.headers['X-Content-Type-Options'] = 'nosniff'
+        response.headers['X-Frame-Options'] = 'SAMEORIGIN'
+        response.headers['X-XSS-Protection'] = '1; mode=block'
+        response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
+        
+        # 2. Caching logic for efficiency
         if 'Cache-Control' not in response.headers:
             if request.path.startswith('/assets/'):
-                response.cache_control.max_age = 31536000 # 1 year for versioned assets
+                response.cache_control.max_age = 31536000 # 1 year
             elif request.path.endswith(('.js', '.css', '.png', '.svg', '.json')):
-                response.cache_control.max_age = 3600 # 1 hour for others
+                response.cache_control.max_age = 3600 # 1 hour
         return response
 
     return app
